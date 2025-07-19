@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dkumbhnkxy5rx" path="res://Assets/Player.png" id="1_v0iea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(6, 8)
+size = Vector2(4, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("1_v0iea")

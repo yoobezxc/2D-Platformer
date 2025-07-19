@@ -3,14 +3,18 @@ extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 const GRAVITY: float = 90.0
-const SPEED: float = 50.0
-const JUMP: float = -60.0
+const SPEED: float = 20.0
+const JUMP: float = -50.0
 
 func _ready() -> void:
 	sprite.play("idle")
 
 func _physics_process(delta: float) -> void:
-	print(self.velocity)
+	if not is_on_floor():
+		self.velocity.y += GRAVITY * delta
+		
+		if self.velocity.y > 0:
+			sprite.play("fall_jump")
 	
 	if Input.is_action_pressed("RIGHT"):
 		self.velocity.x += SPEED * delta
@@ -25,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			sprite.play("run")
 	else:
-		self.velocity.x = lerp(self.velocity.x, 0.0, easeOutSine(0.2))
+		self.velocity.x = lerp(self.velocity.x, 0.0, 0.2)
 		
 		if is_on_floor():
 			sprite.play("idle")
@@ -35,12 +39,6 @@ func _physics_process(delta: float) -> void:
 		
 		if self.velocity.y < 0:
 			sprite.play("start_jump")
-	
-	if not is_on_floor():
-		self.velocity.y += GRAVITY * delta
-		
-		if self.velocity.y > 0:
-			sprite.play("fall_jump")
 	
 	move_and_slide()
 
