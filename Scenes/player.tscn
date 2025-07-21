@@ -88,3 +88,6 @@ shape = SubResource("RectangleShape2D_cvnsp")
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -30)
