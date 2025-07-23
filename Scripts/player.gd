@@ -14,8 +14,8 @@ func _ready() -> void:
 	sprite.play("idle")
 
 func _physics_process(delta: float) -> void:
-	print(velocity)
-	print(time_elapsed)               
+	#print(velocity)
+	#print(time_elapsed)             
 	
 	if not is_on_floor():
 		self.velocity.y += GRAVITY * delta
