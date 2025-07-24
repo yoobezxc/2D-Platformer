@@ -57,6 +57,7 @@ size = Vector2(10, 10)
 [node name="Coin" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_h2p6v")
 animation = &"idle"
+frame_progress = 0.10294
 script = ExtResource("2_g537i")
 
 [node name="Area2D" type="Area2D" parent="."]
