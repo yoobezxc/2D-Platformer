@@ -8,5 +8,5 @@
 [node name="Levels" parent="." instance=ExtResource("1_8pvmw")]
 
 [node name="Player" parent="." instance=ExtResource("1_i04dx")]
-position = Vector2(17, 150)
+position = Vector2(13, 162)
 collision_mask = 6

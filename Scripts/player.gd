@@ -4,11 +4,14 @@ extends CharacterBody2D
 
 const GRAVITY: float = 90.0
 const SPEED: float = 40.0
-const JUMP: float = -50.0
-const JUMP_DELAY: float = 0.3
+const JUMP: float = -55.0
+const JUMP_DELAY: float = 0.15
 
 var is_jumping: bool
 var time_elapsed: float
+
+func respawn() -> void:
+	self.position = Vector2(17.0, 150.0)
 
 func _ready() -> void:
 	sprite.play("idle")
